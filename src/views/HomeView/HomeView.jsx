@@ -12,14 +12,13 @@ const Home = () => {
   return (
     <main className={s.view}>
       <div className={s.wrapper}>
-        <h1 className={s.title}>Phonebook</h1>
-        <p className={s.version}>4.0</p>
+        <h1 className={s.title}>Phonebook &#128214;</h1>
         {isLoggedIn && (
           <p className={s.user}>
             <span className={s.userName}>{userName}</span>
           </p>
         )}
-        <p className={s.greeting}>Welcome to the Phonebook app!</p>
+        <p className={s.greeting}>Welcome to the GoIT online phone book</p>
         {isLoggedIn && (
           <p className={s.manual}>
             Now you can continue on{' '}
@@ -47,26 +46,8 @@ const Home = () => {
           <p className={s.manual}>Then you can:</p>
         )}
 
-        <ul className={s.list}>
-          <li className={s.elem}>
-            <span className={s.text}>Add Your Contacts to the Phonebook!</span>
-          </li>
-          <li className={s.elem}>
-            <span className={s.text}>
-              Delete Your Contacts from the Phonebook!
-            </span>
-          </li>
-          <li className={s.elem}>
-            <span className={s.text}>
-              Filter Your Contacts in the Phonebook!
-            </span>
-          </li>
-          {/* <li className={s.elem}>
-            <span className={s.text}>
-              Change Your Contacts in the Phonebook!
-            </span>
-          </li> */}
-        </ul>
+        <h1 className={s.text}> Add, Filter, Delete your personal contacts</h1>
+        
       </div>
     </main>
   );

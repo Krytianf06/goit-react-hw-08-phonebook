@@ -14,7 +14,7 @@ const Phonebook = ({ addContact }) => {
 
   const handleContactSubmit = event => {
     event.preventDefault();
-    addContact({ name, number, id: nanoid() });
+    addContact({ name, number });
     resetFields();
   };
 
@@ -57,7 +57,7 @@ const Phonebook = ({ addContact }) => {
         required
       />
       <label className={s.label} htmlFor={phoneNumberInputId}>
-        Phone Number &#9742;
+       Phone Number &#9742;
       </label>
       <input
         className={s.input}

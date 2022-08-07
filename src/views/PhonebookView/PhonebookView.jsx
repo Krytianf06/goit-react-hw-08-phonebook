@@ -40,7 +40,7 @@ const PhoneBookView = () => {
       toast.error(
         `${capitalize(
           newContact.name
-        )}'s contact already exists. Please, next time be more attentive to what you are trying to add`
+        )}is already in contacts.`
       );
       return;
     }

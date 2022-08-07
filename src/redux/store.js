@@ -1,29 +1,36 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import { filterReducer } from './reducers';
-import {
-  LOCAL_STORAGE_KEY_FILTER,
-  queryFromLocalStorage,
-} from 'utils/localStorage';
-import { contactsApi } from './contactsApi';
+import { persistReducer, persistStore, REHYDRATE } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
+import { filterReducer } from './filter/filterReducer';
+import authReducer from './auth/auth-slice';
+import contactReducer from './contacts/contacts-slice';
 
-
-const preloadedState = {
-  filter: queryFromLocalStorage(LOCAL_STORAGE_KEY_FILTER, ''),
+const persistAuthConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token'],
 };
+
+const persistedAuthReducer = persistReducer(persistAuthConfig, authReducer);
+
 
 export const store = configureStore({
   reducer: {
-    [contactsApi.reducerPath]: contactsApi.reducer,
     filter: filterReducer,
+    auth: persistedAuthReducer,
+    contacts: contactReducer,
   },
-  preloadedState,
+
   devTools: process.env.NODE_ENV !== 'production',
   middleware: getDefaultMiddleware => [
-    ...getDefaultMiddleware(),
-    contactsApi.middleware,
+    ...getDefaultMiddleware({
+      serializableCheck: { ignoreActions: [REHYDRATE] },
+    }),
   ],
 });
+
+export const persistor = persistStore(store);
 
 setupListeners(store.dispatch);

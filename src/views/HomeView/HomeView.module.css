@@ -3,12 +3,20 @@
   width: 100%;
   min-height: 730px;
   background-color: #ddd;
+  background-image: linear-gradient(
+       rgba(236, 237, 240, 0.4),
+       rgba(62, 66, 94, 0.4)
+     ),
+     url('../../images/hd-wallpaper.jpg');
+     
+     background-position: center;
+     background-repeat: no-repeat;
+     margin: auto;
 }
 
 .wrapper {
   text-align: center;
-
-  background-color: #fff;
+  background-color: rgb(175, 121, 121);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -18,14 +26,11 @@
 }
 
 .title {
+  color: rgb(46, 180, 34);
   margin-bottom: 0px;
+  padding-bottom: 15px;
 }
 
-.version {
-  font-size: 12px;
-  color: #bbb;
-  margin-bottom: 20px;
-}
 
 .greeting {
   margin-bottom: 16px;
@@ -39,7 +44,7 @@
 
 .link {
   text-decoration: none;
-  background-color: var(--link-background-color);
+  background-color:black;
   color: #fff;
   font-size: 18px;
   padding: 2px 4px;
@@ -49,29 +54,18 @@
 
 .link:hover,
 .link:focus {
-  background-color: var(--link-hover-color);
+  background-color:rgb(29, 58, 155);
 }
 
-.elem {
-  display: flex;
-  align-items: center;
-}
-
-.elem::before {
-  content: '';
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--link-hover-color);
-  flex-grow: 1;
-}
 
 .text {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  text-align: left;
   margin-left: 8px;
+  align-items: center;
+  color:rgb(33, 9, 167)
 }
 
 .user {
@@ -79,7 +73,7 @@
 }
 
 .userName {
-  background-color: var(--link-background-color);
+  background-color:rgb(0, 47, 255);
   color: #fff;
   font-size: 24px;
   padding: 4px 8px;

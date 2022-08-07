@@ -8,15 +8,16 @@ const Contact = ({ name, number, id, deleteBtnHandler }) => {
         <span className={s.name}>{`${name}: `}</span>
         <span className={s.tel}>{`${number} `}</span>
       </div>
-
-      <button
-        className="Button"
-        type="button"
-        data-id={id}
-        onClick={deleteBtnHandler}
-      >
-        Delete &#10005;
-      </button>
+      <div>
+        <button
+          className={s.button}
+          type="button"
+          data-id={id}
+          onClick={deleteBtnHandler}
+        >
+          Delete &#10005;
+        </button>
+      </div>
     </li>
   );
 };

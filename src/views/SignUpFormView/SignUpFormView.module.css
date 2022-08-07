@@ -2,13 +2,22 @@
   position: relative;
   width: 100%;
   min-height: 730px;
-  background-color: #ddd;
+  background-color: rgb(201, 19, 19);
+  background-image: linear-gradient(
+       rgba(236, 237, 240, 0.4),
+       rgba(62, 66, 94, 0.4)
+     ),
+     url('../../images/hd-wallpaper.jpg');
+     
+     background-position: center;
+     background-repeat: no-repeat;
+     margin: auto;
 }
 
 .wrapper {
   text-align: center;
 
-  background-color: #fff;
+  background-color: rgb(175, 121, 121);
   position: absolute;
   top: 50%;
   left: 50%;

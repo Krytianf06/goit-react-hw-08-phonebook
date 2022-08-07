@@ -1,0 +1,13 @@
+{
+  "name": "Krystian Florkowski",
+  "email": "krystianf06@mail.com",
+  "password": "jakieshaslo123"
+}
+
+{
+  "user": {
+    "name": "Krystian Florkowski",
+    "email": "krystianf06@mail.com"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmVlZDA5MzQzZWQ4ZTAwMTU3YjczNjQiLCJpYXQiOjE2NTk4MTgxMzF9.OBz8UxJ5MZgG8S4Y5SlbjYkhrA15UOZI0CEDJpgmzK0"
+}

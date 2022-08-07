@@ -1,4 +1,14 @@
 .view {
   min-height: 730px;
   padding: 40px 100px;
+  background-color: rgb(201, 19, 19);
+  background-image: linear-gradient(
+       rgba(236, 237, 240, 0.4),
+       rgba(62, 66, 94, 0.4)
+     ),
+     url('../../images/hd-wallpaper.jpg');
+     
+     background-position: center;
+     background-repeat: no-repeat;
+     margin: auto;
 }
