@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import authOperations from 'redux/auth/auth-operations';
-
 import s from './SignUpForm.module.css';
 
 const SignUpForm = () => {
